@@ -23,3 +23,228 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+* {
+  box-sizing: border-box;
+}
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+/*================================================================*/
+/* Main timer styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+  width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.controls-wrapper {
+  margin-bottom: 32px;
+}
+
+input {
+  outline: none;
+  height: 40px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+}
+
+#datetime-picker {
+  width: 272px;
+  transition: border-color 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+#datetime-picker:hover {
+  border-color: black;
+}
+
+#datetime-picker:focus {
+  border-color: #4e75ff;
+}
+
+#datetime-picker:disabled {
+  border-color: #808080;
+  color: #808080;
+}
+
+.timer-btn {
+  color: #ffffff;
+  border-radius: 8px;
+  border: none;
+  padding: 8px 16px;
+  width: 75px;
+  height: 40px;
+  background-color: #4e75ff;
+  outline: none;
+  transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.timer-btn:hover,
+.timer-btn:focus {
+  background-color: #6c8cff;
+}
+
+.timer-btn:disabled {
+  color: #989898;
+  background-color: #cfcfcf;
+}
+
+.timer {
+  display: flex;
+  column-gap: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.value {
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.label {
+  text-transform: uppercase;
+}
+/*================================================================*/
+/* Main form styles */
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  width: 360px;
+  gap: 16px;
+}
+
+.input-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+input[type='number'] {
+  width: 360px;
+}
+
+fieldset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  padding: 24px 16px 12px;
+}
+label {
+  /* gap: 8px;
+  display: flex; */
+  align-items: center;
+  outline: none;
+}
+
+button[type='submit'] {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 40px;
+  border: none;
+  font-family: inherit;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: #4e75ff;
+  transition: background-color 250ms ease-in-out;
+}
+
+button[type='submit']:hover {
+  background-color: #6c8cff;
+}
+.input-2 {
+  display: block;
+}
+.input-2:hover {
+}
+.span-2 {
+  display: block;
+  margin-bottom: 8px;
+}
+.label-flex {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+}
+.label-flex input {
+  /* margin-right: 8px; */
+}
+.label-flex input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #757575;
+  display: block;
+  transition: all 0.3s;
+}
+.label-flex input ~ .checkmark {
+}
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+  border-radius: 14px;
+  width: 12px;
+  height: 12px;
+  background: #4e75ff;
+  top: 3px;
+  left: 3px;
+}
+.label-flex input:checked ~ .checkmark:after {
+  display: block;
+}
+.label-flex input:checked ~ .checkmark {
+  border-color: #4e75ff !important;
+}
+.label-flex input:hover ~ .checkmark {
+  border-color: black;
+}
